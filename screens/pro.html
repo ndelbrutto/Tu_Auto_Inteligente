@@ -1,0 +1,438 @@
+<!DOCTYPE html><html class="dark" lang="es"><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"><meta content="mobile_stack" name="shell-type"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"><link href="https://fonts.googleapis.com" rel="preconnect"><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"><link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&amp;family=Space+Grotesk:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "surface-bright": "#363940", "surface-tint": "#ffb955", "primary-fixed-dim": "#ffb955", "primary-fixed": "#ffddb4", "surface": "#10131a", "tertiary-fixed": "#53feb4", "on-primary": "#452b00", "surface-container": "#1d2026", "error-container": "#93000a", "on-tertiary-fixed-variant": "#005234", "outline-variant": "#524534", "on-secondary-fixed": "#001f24", "background": "#10131a", "surface-container-lowest": "#0b0e14", "on-error-container": "#ffdad6", "surface-dim": "#10131a", "on-primary-container": "#644000", "tertiary-fixed-dim": "#26e19a", "on-surface": "#e1e2eb", "tertiary": "#3ceda4", "secondary-container": "#00e3fd", "secondary-fixed-dim": "#00daf3", "on-error": "#690005", "tertiary-container": "#00d08b", "outline": "#9f8e7a", "on-primary-fixed-variant": "#633f00", "inverse-surface": "#e1e2eb", "surface-variant": "#32353c", "on-primary-fixed": "#291800", "on-tertiary-container": "#005335", "secondary-fixed": "#9cf0ff", "inverse-on-surface": "#2e3037", "primary-container": "#f5a623", "on-surface-variant": "#d7c3ae", "surface-container-highest": "#32353c", "on-tertiary-fixed": "#002112", "on-secondary-container": "#00616d", "on-secondary-fixed-variant": "#004f58", "inverse-primary": "#835500", "on-background": "#e1e2eb", "secondary": "#bdf4ff", "error": "#ffb4ab", "primary": "#ffc880", "on-secondary": "#00363d", "surface-container-high": "#272a31", "on-tertiary": "#003823", "surface-container-low": "#191c22" }, "borderRadius": { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" }, "spacing": { "space-sm": "0.5rem", "space-lg": "1.25rem", "gutter-tablet": "1.25rem", "space-xl": "2rem", "space-xs": "0.25rem", "space-md": "0.75rem", "margin": "1rem", "margin-tablet": "1.5rem", "gutter": "1rem" }, "fontFamily": { "label-sm": ["JetBrains Mono"], "headline-md": ["Space Grotesk"], "currency-clp": ["JetBrains Mono"], "display-lg": ["Space Grotesk"], "body-md": ["Space Grotesk"], "body-sm": ["Space Grotesk"], "label-md": ["JetBrains Mono"], "spec-num-lg": ["JetBrains Mono"], "spec-num-md": ["JetBrains Mono"], "headline-sm": ["Space Grotesk"], "headline-lg": ["Space Grotesk"], "display-lg-mobile": ["Space Grotesk"], "body-lg": ["Space Grotesk"] }, "fontSize": { "label-sm": ["10px", { "lineHeight": "14px", "fontWeight": "600" }], "headline-md": ["22px", { "lineHeight": "28px", "fontWeight": "600" }], "currency-clp": ["15px", { "lineHeight": "18px", "fontWeight": "500" }], "display-lg": ["44px", { "lineHeight": "52px", "fontWeight": "700" }], "body-md": ["14px", { "lineHeight": "20px", "fontWeight": "400" }], "body-sm": ["12px", { "lineHeight": "16px", "fontWeight": "400" }], "label-md": ["12px", { "lineHeight": "16px", "fontWeight": "500" }], "spec-num-lg": ["24px", { "lineHeight": "28px", "fontWeight": "700" }], "spec-num-md": ["16px", { "lineHeight": "20px", "fontWeight": "600" }], "headline-sm": ["18px", { "lineHeight": "24px", "fontWeight": "600" }], "headline-lg": ["28px", { "lineHeight": "34px", "fontWeight": "600" }], "display-lg-mobile": ["32px", { "lineHeight": "38px", "fontWeight": "700" }], "body-lg": ["16px", { "lineHeight": "24px", "fontWeight": "400" }] } } } };</script><style>@layer base{html,body{width:100vw;margin:0;padding:0;background-color:#10131a;}body{overscroll-behavior:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+</head><body class="bg-surface font-body-md text-body-md text-on-surface flex flex-col min-h-screen selection:bg-primary-container selection:text-surface-container-lowest"><header class="fixed top-0 w-full z-50 pt-safe bg-surface/85 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.45)]"><div class="h-16 px-margin flex items-center justify-between gap-space-xs"><div class="flex items-center gap-space-xs min-w-0"><button aria-label="Volver" class="w-11 h-11 -ml-1.5 flex items-center justify-center text-on-surface hover:text-primary active:scale-90 transition-transform" onclick="history.back()"><span class="material-symbols-outlined text-[22px]">arrow_back_ios_new</span></button><img src="https://lh3.googleusercontent.com/aida/AEtjO1U39MlpuGSK-XiOC75vIyW5QRnsgrhONHPk4tg3-Vn-Pp8Cad3tUIXkGvETNTbNV13_upWHk1iuGBSDJdqx7HvcGwY7D2QNrbgBemDo6u42ENjzm0xgaJYWc6nuupIPeB3YlsmRaacVE52tyNT22nLG_-UtDwJfOrgmqprj5REpXru78VFd00_vqE_ASYBROzJXRsD5ChODSavNGv47IgxahEHAhaD7h6DbTBkqoel1aeVGl9eSc4iP84c" alt="Tu Auto Inteligente" class="h-8 w-auto object-contain flex-shrink-0"><div class="flex flex-col min-w-0"><div class="flex items-center gap-space-xs"><span class="font-headline-sm text-headline-sm font-bold tracking-tight text-on-surface">Tu Auto Inteligente</span><span class="font-label-sm text-label-sm px-1.5 py-0.5 rounded bg-surface-container-high text-primary font-medium tracking-wide uppercase">Chile · CLP</span></div><h1 class="font-label-sm text-label-sm text-primary-container truncate uppercase tracking-widest">Detalle Auto</h1></div></div><div class="flex items-center gap-space-xs flex-shrink-0"><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center flex-shrink-0"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="flex-1 flex flex-col relative w-full pt-16 bg-surface min-h-screen"><div class="flex flex-col w-full px-margin pb-safe space-y-space-lg text-on-surface">
+<!-- Encabezado Telemetría PRO -->
+<div class="relative w-full rounded-xl p-space-lg bg-surface-container overflow-hidden shadow-xl mt-space-sm">
+<div class="absolute -right-8 -top-8 w-36 h-36 rounded-full bg-primary-container/15 blur-2xl pointer-events-none"></div>
+<div class="absolute right-3 top-3 opacity-10">
+<span class="material-symbols-outlined text-[96px] text-primary">verified</span>
+</div>
+<div class="flex items-center gap-space-xs mb-space-xs">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded bg-primary-container text-on-primary-container font-label-sm text-label-sm uppercase font-bold tracking-wider">
+<span class="material-symbols-outlined text-[14px]">bolt</span> Edición Chile
+      </span>
+<span class="font-label-sm text-label-sm text-tertiary font-semibold flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[14px]">verified_user</span> Cruce Oficial
+      </span>
+</div>
+<h2 class="font-headline-lg text-headline-lg font-bold text-on-surface tracking-tight leading-tight">Tu Auto Inteligente <span class="text-primary-container">PRO</span></h2>
+<p class="font-body-md text-body-md text-on-surface-variant mt-space-xs leading-snug">
+      No te compres un cacho. Audita multas JPL, TAG, remates ocultos y negocia con el respaldo técnico que necesitas en Chile.
+    </p>
+<!-- Métrica de Impacto Destacada -->
+<div class="mt-space-md p-space-sm rounded-lg bg-surface-container-high flex items-center gap-space-sm shadow-sm">
+<div class="w-10 h-10 rounded-full bg-tertiary-container/20 flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-tertiary text-[22px]">trending_up</span>
+</div>
+<div class="min-w-0">
+<div class="font-label-sm text-label-sm text-tertiary uppercase font-bold tracking-wide">Ahorro Promedio Verificado</div>
+<div class="font-headline-sm text-headline-sm text-on-surface font-bold leading-tight">
+          $420.000 <span class="font-currency-clp text-currency-clp font-normal text-on-surface-variant">CLP</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Regateando con el reporte y recuperando al tiro hasta $25.000 con el dcto. en taller (el Pase de $8.990 se paga solo más de 2 veces).</p>
+</div>
+</div>
+</div>
+<!-- Selector de Planes -->
+<div class="w-full space-y-space-sm">
+<div class="flex justify-between items-center px-1">
+<span class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider font-semibold">Elige tu modalidad</span>
+<span class="font-label-sm text-label-sm text-primary font-medium flex items-center gap-1">6 VENTAJAS · NUEVO CONVENIO</span>
+</div>
+<div class="grid grid-cols-1 gap-space-xs" id="planSelectorGroup">
+<!-- Opción 1: Pase 1 Mes (Foco Comprador) -->
+<label class="plan-card relative flex items-center justify-between p-space-md rounded-xl bg-surface-container-high cursor-pointer transition-all active:scale-[0.99] shadow-md" onclick="selectPlan('one-month')">
+<input checked="" class="hidden" name="sub_plan" type="radio" value="one_month">
+<div class="flex items-center gap-space-sm min-w-0">
+<div class="plan-radio w-5 h-5 rounded-full bg-primary flex items-center justify-center flex-shrink-0">
+<div class="w-2 h-2 rounded-full bg-on-primary"></div>
+</div>
+<div class="min-w-0">
+<div class="flex items-center gap-1.5">
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold">Pase de Compra</span>
+<span class="font-label-sm text-label-sm px-1.5 py-0.5 rounded bg-primary-container text-on-primary-container font-bold uppercase tracking-wider">Más Popular</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">1 Mes Full Acceso · Ideal mientras buscas tu próximo auto</p>
+</div>
+</div>
+<div class="text-right flex-shrink-0 pl-space-xs">
+<span class="font-headline-sm text-headline-sm text-primary font-bold block leading-none">$8.990</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase">Pago único</span>
+</div>
+</label>
+<!-- Opción 2: Anual con Descuento -->
+<label class="plan-card relative flex items-center justify-between p-space-md rounded-xl bg-surface-container cursor-pointer transition-all active:scale-[0.99]" onclick="selectPlan('annual')">
+<input class="hidden" name="sub_plan" type="radio" value="annual">
+<div class="flex items-center gap-space-sm min-w-0">
+<div class="plan-radio w-5 h-5 rounded-full bg-surface-container-highest flex items-center justify-center flex-shrink-0">
+<div class="w-2 h-2 rounded-full bg-transparent"></div>
+</div>
+<div class="min-w-0">
+<div class="flex items-center gap-1.5">
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold">Plan Anual</span>
+<span class="font-label-sm text-label-sm px-1.5 py-0.5 rounded bg-tertiary-container text-on-tertiary-container font-bold uppercase tracking-wider">-50% OFF</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Para mecánicos, revendedores y entusiastas</p>
+</div>
+</div>
+<div class="text-right flex-shrink-0 pl-space-xs">
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold block leading-none">$29.900</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase">CLP / año</span>
+</div>
+</label>
+<!-- Opción 3: Mensual Recurrente -->
+<label class="plan-card relative flex items-center justify-between p-space-md rounded-xl bg-surface-container cursor-pointer transition-all active:scale-[0.99]" onclick="selectPlan('monthly')">
+<input class="hidden" name="sub_plan" type="radio" value="monthly">
+<div class="flex items-center gap-space-sm min-w-0">
+<div class="plan-radio w-5 h-5 rounded-full bg-surface-container-highest flex items-center justify-center flex-shrink-0">
+<div class="w-2 h-2 rounded-full bg-transparent"></div>
+</div>
+<div class="min-w-0">
+<div class="flex items-center gap-1.5">
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold">Plan Mensual</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Suscripción flexible, cancelas cuando quieras</p>
+</div>
+</div>
+<div class="text-right flex-shrink-0 pl-space-xs">
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold block leading-none">$4.990</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase">CLP / mes</span>
+</div>
+</label>
+</div>
+</div>
+<!-- Cinco Poderes Clave de AutoScore PRO -->
+<div class="w-full space-y-space-sm">
+<div class="flex items-center justify-between px-1">
+<h3 class="font-headline-sm text-headline-sm font-bold text-on-surface">Armas de Evaluación Tu Auto Inteligente PRO</h3>
+<span class="font-label-sm text-label-sm text-primary font-bold">6 VENTAJAS · NUEVO CONVENIO</span>
+</div>
+<div class="space-y-space-xs">
+<!-- Feature 1 -->
+<div class="p-space-md rounded-xl bg-surface-container-high border border-primary/30 flex items-start gap-space-sm shadow-md"><div class="w-10 h-10 rounded-lg bg-primary text-on-primary flex items-center justify-center flex-shrink-0 mt-0.5 shadow-sm"><span class="material-symbols-outlined text-[24px]">car_repair</span></div><div class="min-w-0 flex-1"><div class="flex items-center justify-between gap-1"><h4 class="font-headline-sm text-body-lg font-bold text-primary leading-snug">Hasta 30% DCTO en Red de Talleres Pre-Compra</h4><span class="font-label-sm text-label-sm px-1.5 py-0.5 rounded bg-tertiary-container text-on-tertiary-container font-bold flex-shrink-0">NUEVO EXCLUSIVO</span></div><p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Convenios con talleres certificados en Santiago y regiones. Te ahorras hasta $25.000 CLP en tu primera inspección mecánica con foso, scanner y espesímetro de pintura.</p></div></div><div class="p-space-md rounded-xl bg-surface-container flex items-start gap-space-sm shadow-sm">
+<div class="w-10 h-10 rounded-lg bg-surface-container-high text-primary flex items-center justify-center flex-shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[24px]">policy</span>
+</div>
+<div class="min-w-0 flex-1">
+<div class="flex items-center justify-between">
+<h4 class="font-headline-sm text-body-lg font-bold text-on-surface leading-snug">Radiografía Legal &amp; Historial MOP</h4>
+<span class="font-label-sm text-label-sm px-1.5 py-0.5 rounded bg-surface-container-high text-tertiary font-bold">OFICIAL</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">
+            Cruce con Registro Civil, TAG adeudado en autopistas, multas de juzgados de policía local (JPL), encargo por robo y si fue pérdida total rematada por aseguradoras.
+          </p>
+</div>
+</div>
+<!-- Feature 2 -->
+<div class="p-space-md rounded-xl bg-surface-container flex items-start gap-space-sm shadow-sm">
+<div class="w-10 h-10 rounded-lg bg-surface-container-high text-primary flex items-center justify-center flex-shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[24px]">construction</span>
+</div>
+<div class="min-w-0 flex-1">
+<h4 class="font-headline-sm text-body-lg font-bold text-on-surface leading-snug">Checklist &amp; Fallas de Taller Específicas</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">
+            Historial de rechazos de PRT por gases o frenos, sumado a la lista negra de sensores, cajas automáticas o culatas críticas para ese motor y año exacto en Chile.
+          </p>
+</div>
+</div>
+<!-- Feature 3 -->
+<div class="p-space-md rounded-xl bg-surface-container flex items-start gap-space-sm shadow-sm">
+<div class="w-10 h-10 rounded-lg bg-surface-container-high text-primary flex items-center justify-center flex-shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[24px]">calculate</span>
+</div>
+<div class="min-w-0 flex-1">
+<h4 class="font-headline-sm text-body-lg font-bold text-on-surface leading-snug">Calculadora de Contraoferta Sugerida</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">
+            Ingresa los detalles encontrados y el algoritmo te calcula el descuento técnico fundamentado para negociarle cara a cara al dueño o compraventa.
+          </p>
+</div>
+</div>
+<!-- Feature 4 -->
+<div class="p-space-md rounded-xl bg-surface-container flex items-start gap-space-sm shadow-sm">
+<div class="w-10 h-10 rounded-lg bg-surface-container-high text-primary flex items-center justify-center flex-shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[24px]">compare_arrows</span>
+</div>
+<div class="min-w-0 flex-1">
+<h4 class="font-headline-sm text-body-lg font-bold text-on-surface leading-snug">Garaje Comparativo Sin Límite</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">
+            Compara de 3 a 10 candidatos simultáneamente con matriz de ponderación calibrada: rendimiento, costos de repuesto en 10 de Julio y depreciación anual.
+          </p>
+</div>
+</div>
+<!-- Feature 5 -->
+<div class="p-space-md rounded-xl bg-surface-container flex items-start gap-space-sm shadow-sm">
+<div class="w-10 h-10 rounded-lg bg-surface-container-high text-primary flex items-center justify-center flex-shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[24px]">picture_as_pdf</span>
+</div>
+<div class="min-w-0 flex-1">
+<h4 class="font-headline-sm text-body-lg font-bold text-on-surface leading-snug">Exportación de Ficha Técnica en PDF</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Genera un informe con sello Tu Auto Inteligente descargable o compartible por WhatsApp para tu mecánico de confianza antes de transferir.</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Matriz Comparativa GRATIS vs PRO -->
+<div class="w-full rounded-xl bg-surface-container overflow-hidden shadow-lg">
+<div class="p-space-md bg-surface-container-high flex items-center justify-between">
+<span class="font-headline-sm text-headline-sm font-bold text-on-surface">Capacidades</span>
+<div class="flex gap-space-md font-label-md text-label-md uppercase font-bold text-center">
+<span class="w-14 text-on-surface-variant">Gratis</span>
+<span class="w-14 text-primary">PRO</span>
+</div>
+</div>
+<div class="divide-y-0">
+<!-- Fila 1 -->
+<div class="p-space-md flex items-center justify-between bg-surface-container">
+<span class="font-body-md text-body-md text-on-surface">Ficha Técnica &amp; Homologación 3CV</span>
+<div class="flex gap-space-md items-center text-center">
+<div class="w-14 flex justify-center text-tertiary">
+<span class="material-symbols-outlined text-[20px]">check_circle</span>
+</div>
+<div class="w-14 flex justify-center text-primary">
+<span class="material-symbols-outlined text-[20px]">check_circle</span>
+</div>
+</div>
+</div>
+<!-- Fila 2 -->
+<div class="p-space-md flex items-center justify-between bg-surface-container-low">
+<span class="font-body-md text-body-md text-on-surface">Tasación Fiscal SII &amp; Permiso</span>
+<div class="flex gap-space-md items-center text-center">
+<div class="w-14 flex justify-center text-tertiary">
+<span class="material-symbols-outlined text-[20px]">check_circle</span>
+</div>
+<div class="w-14 flex justify-center text-primary">
+<span class="material-symbols-outlined text-[20px]">check_circle</span>
+</div>
+</div>
+</div>
+<!-- Fila 3 -->
+<div class="p-space-md flex items-center justify-between bg-surface-container">
+<span class="font-body-md text-body-md text-on-surface">Autos guardados en Garaje</span>
+<div class="flex gap-space-md items-center text-center">
+<span class="w-14 font-label-md text-label-md text-on-surface-variant">Máx. 2</span>
+<span class="w-14 font-label-md text-label-md text-primary font-bold">Ilimitados</span>
+</div>
+</div>
+<!-- Fila 4 -->
+<div class="p-space-md flex items-center justify-between bg-surface-container-low">
+<span class="font-body-md text-body-md text-on-surface">Multas JPL &amp; Deuda TAG MOP</span>
+<div class="flex gap-space-md items-center text-center">
+<div class="w-14 flex justify-center text-on-surface-variant/40">
+<span class="material-symbols-outlined text-[20px]">lock</span>
+</div>
+<div class="w-14 flex justify-center text-primary">
+<span class="material-symbols-outlined text-[20px]">check_circle</span>
+</div>
+</div>
+</div>
+<!-- Fila 5 -->
+<div class="p-space-md flex items-center justify-between bg-surface-container">
+<span class="font-body-md text-body-md text-on-surface">Remates de Pérdida Total</span>
+<div class="flex gap-space-md items-center text-center">
+<div class="w-14 flex justify-center text-on-surface-variant/40">
+<span class="material-symbols-outlined text-[20px]">lock</span>
+</div>
+<div class="w-14 flex justify-center text-primary">
+<span class="material-symbols-outlined text-[20px]">check_circle</span>
+</div>
+</div>
+</div>
+<!-- Fila 6 -->
+<div class="p-space-md flex items-center justify-between bg-surface-container-low">
+<span class="font-body-md text-body-md text-on-surface">Historial de Rechazos PRT</span>
+<div class="flex gap-space-md items-center text-center">
+<div class="w-14 flex justify-center text-on-surface-variant/40">
+<span class="material-symbols-outlined text-[20px]">lock</span>
+</div>
+<div class="w-14 flex justify-center text-primary">
+<span class="material-symbols-outlined text-[20px]">check_circle</span>
+</div>
+</div>
+</div>
+<!-- Fila 7 -->
+<div class="p-space-md flex items-center justify-between bg-surface-container">
+<span class="font-body-md text-body-md text-on-surface">Exportación en PDF para Inspección</span>
+<div class="flex gap-space-md items-center text-center">
+<div class="w-14 flex justify-center text-on-surface-variant/40">
+<span class="material-symbols-outlined text-[20px]">lock</span>
+</div>
+<div class="w-14 flex justify-center text-primary">
+<span class="material-symbols-outlined text-[20px]">check_circle</span>
+</div>
+</div>
+</div>
+<div class="p-space-md flex items-center justify-between bg-surface-container-low"><div class="flex flex-col min-w-0 pr-2"><span class="font-body-md text-body-md text-on-surface font-medium">Descuento Talleres Pre-Compra</span><span class="font-label-sm text-label-sm text-tertiary">Foso, scanner y espesímetro</span></div><div class="flex gap-space-md items-center text-center flex-shrink-0"><div class="w-14 flex justify-center text-on-surface-variant/40"><span class="material-symbols-outlined text-[20px]">lock</span></div><div class="w-14 flex justify-center"><span class="font-label-sm text-label-sm px-1.5 py-0.5 rounded bg-primary text-on-primary font-bold tracking-tight">30% OFF</span></div></div></div></div>
+</div>
+<!-- Testimonio Local de Prueba Social -->
+<div class="w-full p-space-md rounded-xl bg-surface-container flex flex-col gap-space-xs shadow-sm">
+<div class="flex items-center gap-space-sm">
+<img class="w-10 h-10 rounded-full object-cover flex-shrink-0" data-alt="Close up photographic portrait of a 34 year old Chilean automotive enthusiast smiling with mechanic workshop lights in background, high contrast, warm amber reflections, realistic skin texture" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAZ6J2P5y-A02db-XIO7NzbqFYX9Yo-DO8QTuDQb4hYDnmO6Y7b4q9Rba0jfFW8bipXz8KREj2LB7ZaZS8j6yuhrkUQGEqbL9hvjsYRfrRFHMSKK07xvQ_L9rOW4jhkNVDB79UTrAwDE91DGZ8dUvFIlfGZ4tnooGHMxCVLRYrzqDKI3UKvR64H5YTF-bctRpydtzNXu5EQGUbcbMCFotj9am8Xb21UYCF1UmMVlP6LIlTuTxXErvlQ">
+<div class="min-w-0 flex-1">
+<div class="flex items-center justify-between">
+<span class="font-headline-sm text-body-md font-bold text-on-surface">Matías Valenzuela</span>
+<div class="flex text-primary">
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant block">Compró un Subaru Forester 2017 · Santiago</span>
+</div>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface italic mt-1 leading-snug">
+      "El vendedor juraba que el auto estaba impecable. Con el reporte PRO saltaron $280.000 en TAG de Vespucio Sur y un rechazo en PRT por gases. Le bajé $600.000 al tiro con el PDF en el teléfono. Se pagó 100 veces solo."
+    </p>
+</div>
+<!-- Acciones y Checkout -->
+<div class="w-full space-y-space-md pt-space-xs">
+<button class="w-full py-4 px-space-md rounded-xl bg-primary-container text-on-primary-container font-headline-sm text-headline-sm font-bold uppercase tracking-wider flex items-center justify-center gap-space-xs shadow-xl active:scale-[0.98] transition-all" onclick="handleProCheckout()">
+<span class="material-symbols-outlined text-[24px]">verified</span>
+<span id="ctaButtonText" class="">Desbloquear por $8.990 CLP</span>
+</button>
+<!-- Respaldos de Pago y Garantía -->
+<div class="flex flex-col items-center gap-space-xs text-center">
+<div class="flex items-center justify-center gap-space-md text-on-surface-variant font-label-sm text-label-sm">
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-tertiary">check_circle</span> Webpay Plus
+        </span>
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-tertiary">check_circle</span> Mercado Pago
+        </span>
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-tertiary">check_circle</span> Tarjeta Prepago
+        </span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+        Garantía de satisfacción: Si el reporte no arroja datos de la patente ingresada, te devolvemos el 100% de inmediato.
+      </p>
+<!-- Link de Continuar Gratis -->
+<button class="mt-space-xs py-2 text-on-surface-variant hover:text-on-surface font-body-md text-body-md underline decoration-outline-variant underline-offset-4 active:scale-95 transition-all" onclick="history.back()">
+        Continuar con la versión básica gratuita
+      </button>
+</div>
+</div>
+</div>
+<script>
+  let selectedPlanType = 'one-month';
+
+  function selectPlan(plan) {
+    selectedPlanType = plan;
+    const cards = document.querySelectorAll('.plan-card');
+    const ctaText = document.getElementById('ctaButtonText');
+
+    cards.forEach((card) => {
+      card.classList.remove('bg-surface-container-high', 'shadow-md');
+      card.classList.add('bg-surface-container');
+      const radio = card.querySelector('.plan-radio');
+      if (radio) {
+        radio.classList.remove('bg-primary');
+        radio.classList.add('bg-surface-container-highest');
+        const dot = radio.querySelector('div');
+        if (dot) {
+          dot.classList.remove('bg-on-primary');
+          dot.classList.add('bg-transparent');
+        }
+      }
+    });
+
+    const activeIndex = plan === 'one-month' ? 0 : (plan === 'annual' ? 1 : 2);
+    const activeCard = cards[activeIndex];
+    if (activeCard) {
+      activeCard.classList.remove('bg-surface-container');
+      activeCard.classList.add('bg-surface-container-high', 'shadow-md');
+      const activeRadio = activeCard.querySelector('.plan-radio');
+      if (activeRadio) {
+        activeRadio.classList.remove('bg-surface-container-highest');
+        activeRadio.classList.add('bg-primary');
+        const activeDot = activeRadio.querySelector('div');
+        if (activeDot) {
+          activeDot.classList.remove('bg-transparent');
+          activeDot.classList.add('bg-on-primary');
+        }
+      }
+    }
+
+    if (ctaText) {
+      if (plan === 'one-month') {
+        ctaText.textContent = 'Desbloquear por $8.990 CLP';
+      } else if (plan === 'annual') {
+        ctaText.textContent = 'Activar Plan Anual $29.900 CLP';
+      } else {
+        ctaText.textContent = 'Iniciar Suscripción $4.990 CLP/mes';
+      }
+    }
+  }
+
+  function handleProCheckout() {
+    const plansInfo = {
+      'one-month': 'Pase de Compra 1 Mes ($8.990 CLP)',
+      'annual': 'Plan Anual AutoScore ($29.900 CLP)',
+      'monthly': 'Plan Mensual AutoScore ($4.990 CLP/mes)'
+    };
+    alert('Conectando con la pasarela segura Webpay / Mercado Pago para ' + plansInfo[selectedPlanType] + '...');
+  }
+</script></main>
+<script>
+let currentFuelPrice = 1320;
+let currentAnnualKm = 15000;
+const avgKmPerLiter = 8.16;
+
+function selectOctanaje(oct, price, btn) {
+  currentFuelPrice = price;
+  document.querySelectorAll('.fuel-chip').forEach(el => {
+    el.className = 'fuel-chip py-1.5 px-2 rounded bg-surface-container-highest/60 hover:bg-surface-container-highest text-left transition-all active:scale-95';
+    const titleSpan = el.querySelector('span.font-bold');
+    if (titleSpan) {
+      titleSpan.className = 'font-label-sm text-label-sm font-bold text-on-surface';
+    }
+    const priceSpan = el.querySelector('span.font-currency-clp');
+    if (priceSpan) {
+      priceSpan.className = 'font-currency-clp text-[12px] text-on-surface-variant block font-semibold mt-0.5';
+    }
+  });
+  btn.className = 'fuel-chip py-1.5 px-2 rounded bg-primary/20 border border-primary text-left transition-all active:scale-95';
+  const activeTitle = btn.querySelector('span.font-bold');
+  if (activeTitle) activeTitle.className = 'font-label-sm text-label-sm font-bold text-primary';
+  const activePrice = btn.querySelector('span.font-currency-clp');
+  if (activePrice) activePrice.className = 'font-currency-clp text-[12px] text-primary block font-bold mt-0.5';
+  recalculateSpend();
+  showToast('Octanaje actualizado: ' + oct + ' Oct ($' + price.toLocaleString('es-CL') + '/L CNE)');
+}
+
+function quickEditKm() {
+  const promptVal = prompt('Ingresa tu estimación de kilómetros anuales:', currentAnnualKm.toString());
+  if (promptVal && !isNaN(promptVal) && Number(promptVal) > 0) {
+    currentAnnualKm = parseInt(promptVal, 10);
+    const display = document.getElementById('userKmDisplay');
+    if (display) display.textContent = currentAnnualKm.toLocaleString('es-CL') + ' km/año';
+    const subDisplay = display?.nextElementSibling;
+    if (subDisplay) subDisplay.textContent = '~' + Math.round(currentAnnualKm / 12).toLocaleString('es-CL') + ' km/mes';
+    recalculateSpend();
+    showToast('Kilometraje ajustado a ' + currentAnnualKm.toLocaleString('es-CL') + ' km/año');
+  }
+}
+
+function recalculateSpend() {
+  const litersPerYear = currentAnnualKm / avgKmPerLiter;
+  const totalAnnual = Math.round(litersPerYear * currentFuelPrice);
+  const totalMonthly = Math.round(totalAnnual / 12);
+  const monthEl = document.getElementById('monthlyFuelSpend');
+  const yearEl = document.getElementById('annualFuelSpend');
+  if (monthEl) monthEl.textContent = '$' + totalMonthly.toLocaleString('es-CL');
+  if (yearEl) yearEl.textContent = 'Anual: $' + totalAnnual.toLocaleString('es-CL') + ' CLP / año';
+}
+</script>
+
+
+
+
+
+</body></html>

@@ -1,0 +1,74 @@
+[
+  {
+    "title": "Ranking & Candidatos",
+    "slug": "ranking",
+    "route": "/ranking",
+    "label": "Ranking",
+    "icon": "leaderboard",
+    "path": "/Users/mac/.gemini/antigravity/scratch/stitch-app/screens/ranking.html"
+  },
+  {
+    "title": "Agregar Auto - Autocompletado Chile",
+    "slug": "agregar-auto",
+    "route": "/agregar-auto",
+    "label": "Agregar Auto",
+    "icon": "add_circle",
+    "path": "/Users/mac/.gemini/antigravity/scratch/stitch-app/screens/agregar-auto.html"
+  },
+  {
+    "title": "Detalle y Evaluación de Auto",
+    "slug": "detalle-auto",
+    "route": "/detalle-auto",
+    "label": "Detalle Auto",
+    "icon": "directions_car",
+    "path": "/Users/mac/.gemini/antigravity/scratch/stitch-app/screens/detalle-auto.html"
+  },
+  {
+    "title": "Ficha Autocompletada AutoScore",
+    "slug": "ficha",
+    "route": "/ficha",
+    "label": "Ficha Técnica",
+    "icon": "description",
+    "path": "/Users/mac/.gemini/antigravity/scratch/stitch-app/screens/ficha.html"
+  },
+  {
+    "title": "Costos TCO a 5 Años",
+    "slug": "tco-5-anos",
+    "route": "/tco-5-anos",
+    "label": "Costos TCO",
+    "icon": "payments",
+    "path": "/Users/mac/.gemini/antigravity/scratch/stitch-app/screens/tco-5-anos.html"
+  },
+  {
+    "title": "Perfiles y Pesos Editables",
+    "slug": "perfiles-pesos",
+    "route": "/perfiles-pesos",
+    "label": "Perfiles/Pesos",
+    "icon": "tune",
+    "path": "/Users/mac/.gemini/antigravity/scratch/stitch-app/screens/perfiles-pesos.html"
+  },
+  {
+    "title": "Inspección Pre-Compra & Red de Talleres",
+    "slug": "inspeccion",
+    "route": "/inspeccion",
+    "label": "Inspección",
+    "icon": "fact_check",
+    "path": "/Users/mac/.gemini/antigravity/scratch/stitch-app/screens/inspeccion.html"
+  },
+  {
+    "title": "AutoScore PRO - Desbloquea Funciones Avanzadas",
+    "slug": "pro",
+    "route": "/pro",
+    "label": "AutoScore PRO",
+    "icon": "workspace_premium",
+    "path": "/Users/mac/.gemini/antigravity/scratch/stitch-app/screens/pro.html"
+  },
+  {
+    "title": "AutoScore Chile Prototype Flow",
+    "slug": "flow",
+    "route": "/flow",
+    "label": "Flujo",
+    "icon": "alt_route",
+    "path": "/Users/mac/.gemini/antigravity/scratch/stitch-app/screens/flow.html"
+  }
+]

@@ -1,0 +1,19 @@
+{
+  "name": "stitch-app",
+  "version": "1.0.0",
+  "description": "Conexión a la API de Google Stitch con Node.js y TypeScript",
+  "type": "module",
+  "scripts": {
+    "start": "node server.mjs",
+    "test-connection": "./test-connection.sh"
+  },
+  "dependencies": {
+    "@google/stitch-sdk": "latest",
+    "dotenv": "^16.4.5"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "tsx": "^4.19.0",
+    "typescript": "^5.6.0"
+  }
+}

@@ -1,0 +1,538 @@
+<!DOCTYPE html><html class="dark" lang="es"><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"><meta content="mobile_stack" name="shell-type"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"><link href="https://fonts.googleapis.com" rel="preconnect"><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"><link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&amp;family=Space+Grotesk:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "surface-bright": "#363940", "surface-tint": "#ffb955", "primary-fixed-dim": "#ffb955", "primary-fixed": "#ffddb4", "surface": "#10131a", "tertiary-fixed": "#53feb4", "on-primary": "#452b00", "surface-container": "#1d2026", "error-container": "#93000a", "on-tertiary-fixed-variant": "#005234", "outline-variant": "#524534", "on-secondary-fixed": "#001f24", "background": "#10131a", "surface-container-lowest": "#0b0e14", "on-error-container": "#ffdad6", "surface-dim": "#10131a", "on-primary-container": "#644000", "tertiary-fixed-dim": "#26e19a", "on-surface": "#e1e2eb", "tertiary": "#3ceda4", "secondary-container": "#00e3fd", "secondary-fixed-dim": "#00daf3", "on-error": "#690005", "tertiary-container": "#00d08b", "outline": "#9f8e7a", "on-primary-fixed-variant": "#633f00", "inverse-surface": "#e1e2eb", "surface-variant": "#32353c", "on-primary-fixed": "#291800", "on-tertiary-container": "#005335", "secondary-fixed": "#9cf0ff", "inverse-on-surface": "#2e3037", "primary-container": "#f5a623", "on-surface-variant": "#d7c3ae", "surface-container-highest": "#32353c", "on-tertiary-fixed": "#002112", "on-secondary-container": "#00616d", "on-secondary-fixed-variant": "#004f58", "inverse-primary": "#835500", "on-background": "#e1e2eb", "secondary": "#bdf4ff", "error": "#ffb4ab", "primary": "#ffc880", "on-secondary": "#00363d", "surface-container-high": "#272a31", "on-tertiary": "#003823", "surface-container-low": "#191c22" }, "borderRadius": { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" }, "spacing": { "space-sm": "0.5rem", "space-lg": "1.25rem", "gutter-tablet": "1.25rem", "space-xl": "2rem", "space-xs": "0.25rem", "space-md": "0.75rem", "margin": "1rem", "margin-tablet": "1.5rem", "gutter": "1rem" }, "fontFamily": { "label-sm": ["JetBrains Mono"], "headline-md": ["Space Grotesk"], "currency-clp": ["JetBrains Mono"], "display-lg": ["Space Grotesk"], "body-md": ["Space Grotesk"], "body-sm": ["Space Grotesk"], "label-md": ["JetBrains Mono"], "spec-num-lg": ["JetBrains Mono"], "spec-num-md": ["JetBrains Mono"], "headline-sm": ["Space Grotesk"], "headline-lg": ["Space Grotesk"], "display-lg-mobile": ["Space Grotesk"], "body-lg": ["Space Grotesk"] }, "fontSize": { "label-sm": ["10px", { "lineHeight": "14px", "fontWeight": "600" }], "headline-md": ["22px", { "lineHeight": "28px", "fontWeight": "600" }], "currency-clp": ["15px", { "lineHeight": "18px", "fontWeight": "500" }], "display-lg": ["44px", { "lineHeight": "52px", "fontWeight": "700" }], "body-md": ["14px", { "lineHeight": "20px", "fontWeight": "400" }], "body-sm": ["12px", { "lineHeight": "16px", "fontWeight": "400" }], "label-md": ["12px", { "lineHeight": "16px", "fontWeight": "500" }], "spec-num-lg": ["24px", { "lineHeight": "28px", "fontWeight": "700" }], "spec-num-md": ["16px", { "lineHeight": "20px", "fontWeight": "600" }], "headline-sm": ["18px", { "lineHeight": "24px", "fontWeight": "600" }], "headline-lg": ["28px", { "lineHeight": "34px", "fontWeight": "600" }], "display-lg-mobile": ["32px", { "lineHeight": "38px", "fontWeight": "700" }], "body-lg": ["16px", { "lineHeight": "24px", "fontWeight": "400" }] } } } };</script><style>@layer base{html,body{width:100vw;margin:0;padding:0;background-color:#10131a;}body{overscroll-behavior:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+</head><body class="bg-surface font-body-md text-body-md text-on-surface flex flex-col min-h-screen selection:bg-primary-container selection:text-surface-container-lowest"><header class="fixed top-0 w-full z-50 pt-safe bg-surface/85 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.45)]"><div class="h-16 px-margin flex items-center justify-between gap-space-xs"><div class="flex items-center gap-space-xs min-w-0"><button aria-label="Volver" class="w-11 h-11 -ml-1.5 flex items-center justify-center text-on-surface hover:text-primary active:scale-90 transition-transform" onclick="history.back()"><span class="material-symbols-outlined text-[22px]">arrow_back_ios_new</span></button><img alt="Tu Auto Inteligente" class="h-8 md:h-9 w-auto object-contain flex-shrink-0" src="https://lh3.googleusercontent.com/aida/AEtjO1U39MlpuGSK-XiOC75vIyW5QRnsgrhONHPk4tg3-Vn-Pp8Cad3tUIXkGvETNTbNV13_upWHk1iuGBSDJdqx7HvcGwY7D2QNrbgBemDo6u42ENjzm0xgaJYWc6nuupIPeB3YlsmRaacVE52tyNT22nLG_-UtDwJfOrgmqprj5REpXru78VFd00_vqE_ASYBROzJXRsD5ChODSavNGv47IgxahEHAhaD7h6DbTBkqoel1aeVGl9eSc4iP84c"><div class="flex flex-col min-w-0"><div class="flex items-center gap-space-xs"><span class="font-headline-sm text-headline-sm font-bold tracking-tight text-on-surface">Tu Auto Inteligente</span><span class="font-label-sm text-label-sm px-1.5 py-0.5 rounded bg-surface-container-high text-primary font-medium tracking-wide uppercase">Chile · CLP</span></div><h1 class="font-label-sm text-label-sm text-primary-container truncate uppercase tracking-widest">Detalle Auto</h1></div></div><div class="flex items-center gap-space-xs flex-shrink-0"><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center flex-shrink-0"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="flex-1 flex flex-col relative w-full pt-16 bg-surface min-h-screen"><div class="flex flex-col w-full pb-safe">
+<!-- Interactive Toast Feedback -->
+<div class="fixed top-20 left-4 right-4 z-50 transform -translate-y-28 opacity-0 pointer-events-none transition-all duration-300 flex items-center gap-space-sm p-space-md rounded-xl bg-surface-container-highest text-on-surface shadow-2xl" id="actionToast">
+<span class="material-symbols-outlined text-tertiary text-[20px]" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span class="font-body-sm text-body-sm text-on-surface flex-1" id="toastMsg">Cita reservada</span>
+</div>
+<!-- Header & Context Area -->
+<section class="px-margin pt-space-md pb-space-sm flex flex-col gap-space-xs">
+<div class="flex items-center gap-space-xs flex-wrap">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-primary/10 text-primary font-label-sm text-label-sm font-semibold tracking-wider uppercase">
+<span class="material-symbols-outlined text-[14px]" style="font-variation-settings: 'FILL' 1;">verified</span>
+        Talleres Verificados Chile
+      </span>
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-tertiary/10 text-tertiary font-label-sm text-label-sm">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary animate-pulse"></span>
+        18 Disponibles Hoy
+      </span>
+</div>
+<h2 class="font-headline-lg text-headline-lg font-bold text-on-surface tracking-tight mt-1">
+      Red de Talleres &amp; Inspección Pre-Compra
+    </h2>
+<p class="font-body-md text-body-md text-on-surface-variant">
+      Lleva el auto a un elevador o escáner profesional antes de transferir en notaría. Evita sorpresas de caja, compresión y vicios ocultos.
+    </p>
+</section>
+<!-- Banner PRO Hero Savings -->
+<section class="px-margin my-space-sm">
+<div class="relative overflow-hidden rounded-xl bg-gradient-to-br from-surface-container-high via-surface-container to-surface-container-low p-space-md shadow-xl">
+<div class="absolute -right-8 -bottom-8 w-32 h-32 rounded-full bg-primary-container/15 blur-2xl pointer-events-none"></div>
+<div class="absolute top-0 right-0 p-3 opacity-10">
+<span class="material-symbols-outlined text-[72px] text-primary">car_repair</span>
+</div>
+<div class="relative z-10 flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-1.5">
+<span class="px-2 py-0.5 rounded bg-primary-container text-on-primary font-label-sm text-label-sm font-bold uppercase tracking-wider">
+              PRO ACCESS
+            </span>
+<span class="font-label-sm text-label-sm text-primary font-semibold">Descuento Activo</span>
+</div>
+<span class="font-label-sm text-label-sm text-tertiary bg-tertiary/10 px-2 py-0.5 rounded font-mono">
+            Ahorras hasta -$20.000 CLP
+          </span>
+</div>
+<h3 class="font-headline-sm text-headline-sm font-bold text-on-surface text-balance">Beneficio Tu Auto Inteligente PRO: 20% a 30% DCTO</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+          Inspección pre-compra integral en taller o a domicilio + Escaneo de computador OBD2 con reporte de kilometraje adulterado.
+        </p>
+<!-- Dynamic Compare Bar -->
+<div class="mt-space-xs flex items-center justify-between p-2 rounded-lg bg-surface-container-lowest/80">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant line-through">Público: $65.000 CLP</span>
+<span class="font-spec-num-md text-spec-num-md font-bold text-primary">Con PRO: $45.500 CLP</span>
+</div>
+<div class="flex items-center gap-1 text-tertiary font-label-sm text-label-sm font-semibold">
+<span class="material-symbols-outlined text-[16px]">verified_user</span>
+<span class="">Garantía Tu Auto Inteligente</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Filter Controls Zone -->
+<section class="px-margin my-space-sm flex flex-col gap-space-sm">
+<!-- Zone Selector Button / Dropdown -->
+<div class="flex flex-col gap-1">
+<label class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px] text-primary">location_on</span>
+        Ubicación en Chile
+      </label>
+<div class="relative">
+<select class="w-full h-11 px-3 appearance-none rounded-lg bg-surface-container text-on-surface font-body-sm text-body-sm focus:outline-none focus:bg-surface-container-high transition-colors" id="zoneSelect" onchange="filterWorkshops()">
+<option value="all">Todas las Comunas y Regiones</option>
+<option selected="" value="10dejulio">Santiago · Barrio 10 de Julio / Centro</option>
+<option value="providencia">Santiago · Providencia / Ñuñoa / Las Condes</option>
+<option value="maipu">Santiago · Maipú / San Miguel / Poniente</option>
+<option value="domicilio">Servicio Móvil · Todo Gran Santiago</option>
+<option value="vina">V Región · Viña del Mar / Valparaíso</option>
+<option value="conce">VIII Región · Concepción / San Pedro</option>
+</select>
+<span class="material-symbols-outlined absolute right-3 top-3 text-[20px] text-on-surface-variant pointer-events-none">expand_more</span>
+</div>
+</div>
+<!-- Modality Segmented Pill Controls -->
+<div class="grid grid-cols-2 gap-space-xs p-1 rounded-xl bg-surface-container-lowest">
+<button class="modality-chip flex items-center justify-center gap-1.5 py-2.5 px-3 rounded-lg font-body-sm text-body-sm font-medium transition-all active:scale-95 bg-primary-container text-on-primary shadow-md" id="filterTaller" onclick="setModality('taller', this)">
+<span class="material-symbols-outlined text-[18px]">car_gear</span>
+<span class="">En Taller Físico</span>
+</button>
+<button class="modality-chip flex items-center justify-center gap-1.5 py-2.5 px-3 rounded-lg font-body-sm text-body-sm font-medium transition-all active:scale-95 text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high" id="filterMovil" onclick="setModality('movil', this)">
+<span class="material-symbols-outlined text-[18px]">home_repair_service</span>
+<span class="">A Domicilio</span>
+</button>
+</div>
+</section>
+<!-- Certified Workshops List -->
+<section class="px-margin flex flex-col gap-space-md mt-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider font-semibold">
+        Talleres Evaluados &amp; Certificados
+      </span>
+<span class="font-label-sm text-label-sm text-primary font-mono font-bold" id="counterLabel">
+        3 Disponibles
+      </span>
+</div>
+<!-- Workshop Card 1 -->
+<article class="workshop-card flex flex-col rounded-xl bg-surface-container overflow-hidden shadow-lg" data-type="taller" data-zone="10dejulio">
+<!-- Media Header -->
+<div class="relative h-40 w-full overflow-hidden bg-surface-container-highest">
+<img class="w-full h-full object-cover" data-alt="High-end mechanics garage in Santiago Chile with a modern hydraulic car lift lifting a modern pickup truck, diagnostic OBD2 tablet mounted on technician toolbox, warm workshop ambient lighting with high contrast dark aesthetic" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCGP5N-XLkkkCGknMh-76Jw-VMGVLorHCwpuu0sl9kgdX_khuAv-gPiiPJJ81p7T8MTcYz7Hc6EtR74-4HZqjD_PAXGMS6ilx2gR-KQm_clD9aBl67Tt4p5-KfkCAz4iJaRT2kncwDsCBJVz3EViqJAX9xPmzUwzm1AQqL6zgALWN8rfVBRNQhwNQjgi8K5yo5Z0iAdZDN1ARUzZo0nYCPv9QXWkEqRJvZg25oj1EoGObajZRYSxa46">
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container via-surface-container/40 to-transparent"></div>
+<div class="absolute top-3 left-3 flex items-center gap-1.5">
+<span class="px-2 py-0.5 rounded bg-surface-container-lowest/90 backdrop-blur-md text-primary font-label-sm text-label-sm font-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px] text-primary" style="font-variation-settings: 'FILL' 1;">star</span>
+            4.9
+          </span>
+<span class="px-2 py-0.5 rounded bg-surface-container-lowest/80 backdrop-blur-md text-on-surface-variant font-label-sm text-label-sm font-medium">
+            142 inspecciones
+          </span>
+</div>
+<div class="absolute bottom-2.5 left-3 right-3 flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-tertiary-fixed font-semibold px-2 py-0.5 rounded bg-surface-container-lowest/85 backdrop-blur-md">
+            Especialista Jeep, Ford, Chevrolet
+          </span>
+<span class="font-label-sm text-label-sm text-on-surface bg-surface-container-lowest/80 px-2 py-0.5 rounded flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px] text-primary">pin_drop</span> 10 de Julio
+          </span>
+</div>
+</div>
+<!-- Content -->
+<div class="p-space-md flex flex-col gap-space-sm">
+<div class="flex items-start justify-between gap-2">
+<div class="flex flex-col">
+<h4 class="font-headline-sm text-headline-sm font-bold text-on-surface leading-tight">
+              Taller Spezialist 4x4 &amp; Americanos
+            </h4>
+<span class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">
+              Elevador de 4 columnas · Foso hidráulico · Banco de gases
+            </span>
+</div>
+</div>
+<!-- Service Badges -->
+<div class="flex flex-wrap gap-1.5">
+<span class="font-label-sm text-label-sm px-2 py-1 rounded bg-surface-container-high text-on-surface">Compresión de cilindros</span>
+<span class="font-label-sm text-label-sm px-2 py-1 rounded bg-surface-container-high text-on-surface">Holguras 4x4 &amp; cardán</span>
+<span class="font-label-sm text-label-sm px-2 py-1 rounded bg-surface-container-high text-on-surface">Fugas de retén</span>
+<span class="font-label-sm text-label-sm px-2 py-1 rounded bg-surface-container-high text-on-surface">Escáner Mopar/OBD2</span>
+</div>
+<!-- Urgency & Pricing Box -->
+<div class="flex flex-col gap-space-xs p-space-sm rounded-lg bg-surface-container-low mt-1">
+<div class="flex items-center gap-1.5 text-tertiary font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[16px]">schedule</span>
+<span class="font-semibold">Garantía Tu Auto Inteligente</span>
+</div>
+<div class="flex items-baseline justify-between pt-1">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant line-through">Normal: $65.000 CLP</span>
+<div class="flex items-center gap-1.5">
+<span class="font-spec-num-lg text-spec-num-lg font-bold text-primary font-currency-clp">$45.500</span>
+<span class="font-label-sm text-label-sm text-primary uppercase font-bold">CLP</span>
+<span class="font-label-sm text-label-sm text-on-primary bg-primary-container px-1.5 py-0.2 rounded font-bold ml-1">-30% PRO</span>
+</div>
+</div>
+<button class="h-10 px-4 rounded-lg bg-primary-container hover:bg-primary font-headline-sm text-[13px] font-bold text-on-primary uppercase tracking-wide flex items-center justify-center gap-1 transition-all active:scale-95 shadow-md" onclick="bookTaller('Taller Spezialist 4x4', '$45.500 CLP')">
+<span class="">Agendar</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+</article>
+<!-- Workshop Card 2 -->
+<article class="workshop-card flex flex-col rounded-xl bg-surface-container overflow-hidden shadow-lg" data-type="taller" data-zone="providencia">
+<!-- Media Header -->
+<div class="relative h-40 w-full overflow-hidden bg-surface-container-highest">
+<img class="w-full h-full object-cover" data-alt="European car service center in Providencia Santiago Chile with German diagnostic equipment, paint thickness gauge on BMW hood, pristine dark garage floor, high precision tech instrumentation" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA8Nc0NIP7h5Eb5fSeaL_u10w3lOzncn-LKjBp2YkOEKGOsPbI2j8lBGwXdO_1vYLU_6jNzugRDvA7mo95kJRWn7SQw3ynt7S2vxQWwEF2ZDhbzsXvStFlfKjdijKw6d-489SI4jSIKdhq2F1VrWvmpUi9y3577bBZB1uS_7-W9tlAeE7QSgMZ1hmJ6Xkg_TSv0Q6lwGzT34G3TRGt_EJVyvnvHgvfIeNHmo2g63MPOKUPYzHsiKzSP">
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container via-surface-container/40 to-transparent"></div>
+<div class="absolute top-3 left-3 flex items-center gap-1.5">
+<span class="px-2 py-0.5 rounded bg-surface-container-lowest/90 backdrop-blur-md text-primary font-label-sm text-label-sm font-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px] text-primary" style="font-variation-settings: 'FILL' 1;">star</span>
+            4.9
+          </span>
+<span class="px-2 py-0.5 rounded bg-surface-container-lowest/80 backdrop-blur-md text-on-surface-variant font-label-sm text-label-sm font-medium">
+            218 inspecciones
+          </span>
+</div>
+<div class="absolute bottom-2.5 left-3 right-3 flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-secondary font-semibold px-2 py-0.5 rounded bg-surface-container-lowest/85 backdrop-blur-md">
+            Especialista BMW, VAG &amp; Subaru
+          </span>
+<span class="font-label-sm text-label-sm text-on-surface bg-surface-container-lowest/80 px-2 py-0.5 rounded flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px] text-primary">pin_drop</span> Providencia
+          </span>
+</div>
+</div>
+<!-- Content -->
+<div class="p-space-md flex flex-col gap-space-sm">
+<div class="flex items-start justify-between gap-2">
+<div class="flex flex-col">
+<h4 class="font-headline-sm text-headline-sm font-bold text-on-surface leading-tight">
+              Centro Técnico Alemán Multimarca
+            </h4>
+<span class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">
+              Escáner de telemetría OBD2 · Espesímetro ultrasónico de pintura
+            </span>
+</div>
+</div>
+<!-- Service Badges -->
+<div class="flex flex-wrap gap-1.5">
+<span class="font-label-sm text-label-sm px-2 py-1 rounded bg-surface-container-high text-on-surface">Espesímetro pintura (micrones)</span>
+<span class="font-label-sm text-label-sm px-2 py-1 rounded bg-surface-container-high text-on-surface">Prueba de ruta autopista</span>
+<span class="font-label-sm text-label-sm px-2 py-1 rounded bg-surface-container-high text-on-surface">Escáner transmisión DSG/CVT</span>
+</div>
+<!-- Pricing & Action -->
+<div class="flex flex-col gap-space-xs p-space-sm rounded-lg bg-surface-container-low mt-1">
+<div class="flex items-center gap-1.5 text-primary font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[16px]">verified</span>
+<span class="font-semibold">Detecta choques graves y descarte de kilometraje</span>
+</div>
+<div class="flex items-baseline justify-between pt-1">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant line-through">Normal: $75.000 CLP</span>
+<div class="flex items-center gap-1.5">
+<span class="font-spec-num-lg text-spec-num-lg font-bold text-primary font-currency-clp">$55.000</span>
+<span class="font-label-sm text-label-sm text-primary uppercase font-bold">CLP</span>
+<span class="font-label-sm text-label-sm text-on-primary bg-primary-container px-1.5 py-0.2 rounded font-bold ml-1">-27% PRO</span>
+</div>
+</div>
+<button class="h-10 px-4 rounded-lg bg-primary-container hover:bg-primary font-headline-sm text-[13px] font-bold text-on-primary uppercase tracking-wide flex items-center justify-center gap-1 transition-all active:scale-95 shadow-md" onclick="bookTaller('Centro Técnico Alemán', '$55.000 CLP')">
+<span class="">Agendar</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+</article>
+<!-- Workshop Card 3 (Móvil) -->
+<article class="workshop-card flex flex-col rounded-xl bg-surface-container overflow-hidden shadow-lg" data-type="movil" data-zone="domicilio">
+<!-- Media Header -->
+<div class="relative h-40 w-full overflow-hidden bg-surface-container-highest">
+<img class="w-full h-full object-cover" data-alt="Automotive field technician in mobile van with diagnostic kit, conducting on-site car pre-purchase inspection in a Santiago residential driveway, inspecting front engine bay with diagnostic tablet" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDSil2Y30q0rEiHC6xP6B596x7SS_hdlWQLKsC98zGowzf20VfjsGIro4gG9_OEPuhhe1rBI98nYjjxnwiGA7jOkj0Oi_3nd_iOfvF3wrSm1tIcW3WT3jrVLnJdadUeEiUFMCiSfCOmn5OOx64OtgcVxl544JmbWgwrHdoDSaPV4q9QlmRsf1D7_xLZWxg-ES-mEu_OhP90Wkt1AHXW8VlzD_BejbEUC3yndzDUVFObiGD9EdAvqjuZ">
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container via-surface-container/40 to-transparent"></div>
+<div class="absolute top-3 left-3 flex items-center gap-1.5">
+<span class="px-2 py-0.5 rounded bg-surface-container-lowest/90 backdrop-blur-md text-primary font-label-sm text-label-sm font-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px] text-primary" style="font-variation-settings: 'FILL' 1;">star</span>
+            4.8
+          </span>
+<span class="px-2 py-0.5 rounded bg-surface-container-lowest/80 backdrop-blur-md text-on-surface-variant font-label-sm text-label-sm font-medium">
+            310 inspecciones
+          </span>
+</div>
+<div class="absolute bottom-2.5 left-3 right-3 flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-tertiary-fixed font-semibold px-2 py-0.5 rounded bg-surface-container-lowest/85 backdrop-blur-md">
+            Vamos a la casa del vendedor
+          </span>
+<span class="font-label-sm text-label-sm text-secondary bg-surface-container-lowest/80 px-2 py-0.5 rounded flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px]">electric_bolt</span> Móvil In-Situ
+          </span>
+</div>
+</div>
+<!-- Content -->
+<div class="p-space-md flex flex-col gap-space-sm">
+<div class="flex items-start justify-between gap-2">
+<div class="flex flex-col">
+<h4 class="font-headline-sm text-headline-sm font-bold text-on-surface leading-tight">
+              AutoCheck Móvil Chile
+            </h4>
+<span class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">
+              Sin moverte de casa ni pedir permisos de traslado al dueño
+            </span>
+</div>
+</div>
+<!-- Service Badges -->
+<div class="flex flex-wrap gap-1.5">
+<span class="font-label-sm text-label-sm px-2 py-1 rounded bg-surface-container-high text-on-surface">Escáner in-situ en domicilio</span>
+<span class="font-label-sm text-label-sm px-2 py-1 rounded bg-surface-container-high text-on-surface">Prueba de carga batería/alternador</span>
+<span class="font-label-sm text-label-sm px-2 py-1 rounded bg-surface-container-high text-on-surface">Informe PDF instantáneo en 30m</span>
+</div>
+<!-- Pricing & Action -->
+<div class="flex flex-col gap-space-xs p-space-sm rounded-lg bg-surface-container-low mt-1">
+<div class="flex items-center gap-1.5 text-secondary font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[16px]">location_searching</span>
+<span class="font-semibold">Cobertura: Gran Santiago, Viña y Concepción</span>
+</div>
+<div class="flex items-baseline justify-between pt-1">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant line-through">Normal: $55.000 CLP</span>
+<div class="flex items-center gap-1.5">
+<span class="font-spec-num-lg text-spec-num-lg font-bold text-primary font-currency-clp">$39.900</span>
+<span class="font-label-sm text-label-sm text-primary uppercase font-bold">CLP</span>
+<span class="font-label-sm text-label-sm text-on-primary bg-primary-container px-1.5 py-0.2 rounded font-bold ml-1">-27% PRO</span>
+</div>
+</div>
+<button class="h-10 px-4 rounded-lg bg-secondary-container hover:bg-secondary font-headline-sm text-[13px] font-bold text-on-secondary-container uppercase tracking-wide flex items-center justify-center gap-1 transition-all active:scale-95 shadow-md" onclick="bookTaller('AutoCheck Móvil Chile', '$39.900 CLP')">
+<span class="">Agendar</span>
+<span class="material-symbols-outlined text-[16px]">bolt</span>
+</button>
+</div>
+</div>
+</div>
+</article>
+</section>
+<!-- Interactive Map Anchor Banner -->
+<section class="px-margin my-space-md">
+<div class="p-space-md rounded-xl bg-surface-container flex flex-col gap-space-sm shadow-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[20px]">map</span>
+<span class="font-headline-sm text-headline-sm font-semibold text-on-surface">Filtro Georreferenciado</span>
+</div>
+<span class="font-label-sm text-label-sm text-tertiary">GPS Activo</span>
+</div>
+<div class="w-full h-32 rounded-lg bg-surface-container-high relative overflow-hidden flex items-end p-2.5 shadow-inner" data-location="Santiago, Chile" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuC3Qe5m22CkUojm6ouDO0v6QhoFErOliE7Ekq9eGK5ZXf39uw-Btrps9B1SQFyaI3txN_BYW0_xAEgMRLcZ9UPvZQO65yVKlAGQmy0UeacBWr4nKQsJac4xfyUwdhnw-3RSFQH_piFDb7yWdqGIgQb6UQz-Tsv3llEklvT3SAK9xpV7P7SoVvcs-948Sux4tRSuOmiVhRVurggs_JmK98cD0JbiQvG4F_3rnPrM3gppoBytpm3B164B')">
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest/90 via-surface-container-lowest/30 to-transparent"></div>
+<div class="relative z-10 flex items-center justify-between w-full">
+<span class="font-label-sm text-label-sm text-on-surface font-semibold flex items-center gap-1">
+<span class="w-2 h-2 rounded-full bg-primary-container"></span>
+            3 talleres a menos de 7 km
+          </span>
+<button class="px-2.5 py-1 rounded bg-surface-container-highest text-primary font-label-sm text-label-sm font-bold uppercase active:scale-95 transition-transform" onclick="triggerGeoPrompt()">
+            Ver en Mapa
+          </button>
+</div>
+</div>
+</div>
+</section>
+<!-- Technical Value Proposition Section: ¿Qué incluye? -->
+<section class="px-margin my-space-sm mb-space-xl flex flex-col gap-space-md">
+<div class="flex flex-col gap-1">
+<span class="font-label-sm text-label-sm text-primary uppercase font-bold tracking-widest">
+        Estándar de Certificación
+      </span>
+<h3 class="font-headline-md text-headline-md font-bold text-on-surface">¿Qué incluye la Inspección Pre-Compra Tu Auto Inteligente?</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+        No dejes pasar fallas electrónicas o vicios ocultos de chasis que después te costarán millones de pesos en reparaciones.
+      </p>
+</div>
+<!-- 4 High Impact Value Cards (Bento Style) -->
+<div class="grid grid-cols-1 gap-space-sm">
+<!-- Feature 1 -->
+<div class="p-space-md rounded-xl bg-surface-container flex items-start gap-space-md shadow-sm">
+<div class="w-10 h-10 rounded-lg bg-surface-container-high flex items-center justify-center flex-shrink-0 text-primary">
+<span class="material-symbols-outlined text-[24px]">fact_check</span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-2">
+<h4 class="font-headline-sm text-[16px] font-bold text-on-surface">Checklist de 120 Puntos Críticos</h4>
+<span class="font-label-sm text-label-sm px-1.5 py-0.5 rounded bg-tertiary/10 text-tertiary font-bold">100%</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">
+            Revisión milimétrica de tren delantero, fugas de aceite, bujes, pastillas, discos de freno y estado de fluidos bajo norma técnica.
+          </p>
+</div>
+</div>
+<!-- Feature 2 -->
+<div class="p-space-md rounded-xl bg-surface-container flex items-start gap-space-md shadow-sm">
+<div class="w-10 h-10 rounded-lg bg-surface-container-high flex items-center justify-center flex-shrink-0 text-secondary">
+<span class="material-symbols-outlined text-[24px]">format_paint</span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-2">
+<h4 class="font-headline-sm text-[16px] font-bold text-on-surface">Espesímetro Digital de Pintura</h4>
+<span class="font-label-sm text-label-sm px-1.5 py-0.5 rounded bg-secondary/10 text-secondary font-bold">Micrones</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">
+            Detecta masilla oculta, paneles repintados por choques no declarados ante el seguro y deformaciones en pilares y largueros.
+          </p>
+</div>
+</div>
+<!-- Feature 3 -->
+<div class="p-space-md rounded-xl bg-surface-container flex items-start gap-space-md shadow-sm">
+<div class="w-10 h-10 rounded-lg bg-surface-container-high flex items-center justify-center flex-shrink-0 text-primary-container">
+<span class="material-symbols-outlined text-[24px]">memory</span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-2">
+<h4 class="font-headline-sm text-[16px] font-bold text-on-surface">Escáner OBD2 en Vivo</h4>
+<span class="font-label-sm text-label-sm px-1.5 py-0.5 rounded bg-primary-container/20 text-primary font-bold">Anti-Fraude</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">
+            Lectura de códigos de falla DTC borrados recientemente por el vendedor, estado del DPF (diésel), airbags y kilometraje real en ECU.
+          </p>
+</div>
+</div>
+<!-- Feature 4 -->
+<div class="p-space-md rounded-xl bg-surface-container flex items-start gap-space-md shadow-sm">
+<div class="w-10 h-10 rounded-lg bg-surface-container-high flex items-center justify-center flex-shrink-0 text-tertiary">
+<span class="material-symbols-outlined text-[24px]">verified_user</span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-2">
+<h4 class="font-headline-sm text-[16px] font-bold text-on-surface">Certificado Digital con QR</h4>
+<span class="font-label-sm text-label-sm px-1.5 py-0.5 rounded bg-tertiary/10 text-tertiary font-bold">PDF / Notarial</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">
+            Documento técnico firmado por mecánico certificado, útil para negociar el precio final de compra o rechazar una mala unidad.
+          </p>
+</div>
+</div>
+</div>
+<!-- Assurance Footnote -->
+<div class="p-space-md rounded-xl bg-surface-container-lowest flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-primary text-[28px] flex-shrink-0">shield</span>
+<div class="flex flex-col">
+<span class="font-body-sm text-body-sm text-on-surface font-semibold">Respaldo Tu Auto Inteligente Chile</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Si el taller no cumple el estándar de 120 puntos, reembolsamos el 100% de tu cupón PRO sin trámites.</span>
+</div>
+</div>
+</section>
+<!-- Interactive JavaScript -->
+<script>
+    let activeModality = 'taller';
+
+    function setModality(type, btn) {
+      activeModality = type;
+      document.querySelectorAll('.modality-chip').forEach(el => {
+        el.className = 'modality-chip flex items-center justify-center gap-1.5 py-2.5 px-3 rounded-lg font-body-sm text-body-sm font-medium transition-all active:scale-95 text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high';
+      });
+      btn.className = 'modality-chip flex items-center justify-center gap-1.5 py-2.5 px-3 rounded-lg font-body-sm text-body-sm font-medium transition-all active:scale-95 bg-primary-container text-on-primary shadow-md';
+      filterWorkshops();
+    }
+
+    function filterWorkshops() {
+      const zone = document.getElementById('zoneSelect').value;
+      const cards = document.querySelectorAll('.workshop-card');
+      let visibleCount = 0;
+
+      cards.forEach(card => {
+        const cardType = card.getAttribute('data-type');
+        const cardZone = card.getAttribute('data-zone');
+
+        const matchesType = (activeModality === 'all') || (cardType === activeModality);
+        const matchesZone = (zone === 'all') || (cardZone === zone) || (cardType === 'movil');
+
+        if (matchesType && matchesZone) {
+          card.style.display = 'flex';
+          visibleCount++;
+        } else {
+          card.style.display = 'none';
+        }
+      });
+
+      const counter = document.getElementById('counterLabel');
+      if (counter) {
+        counter.textContent = visibleCount + (visibleCount === 1 ? ' Disponible' : ' Disponibles');
+      }
+    }
+
+    function bookTaller(name, price) {
+      showToast('¡Cupo PRO Reservado! ' + name + ' a ' + price + '. Se envió confirmación vía WhatsApp.');
+    }
+
+    function triggerGeoPrompt() {
+      showToast('Cargando mapa en tiempo real con talleres en Santiago...');
+    }
+
+    function showToast(text) {
+      const toast = document.getElementById('actionToast');
+      const msg = document.getElementById('toastMsg');
+      if (!toast || !msg) return;
+      msg.textContent = text;
+      toast.classList.remove('opacity-0', '-translate-y-28', 'pointer-events-none');
+      toast.classList.add('opacity-100', 'translate-y-0');
+      setTimeout(() => {
+        toast.classList.add('opacity-0', '-translate-y-28', 'pointer-events-none');
+        toast.classList.remove('opacity-100', 'translate-y-0');
+      }, 3500);
+    }
+  </script>
+</div></main>
+<script>
+let currentFuelPrice = 1320;
+let currentAnnualKm = 15000;
+const avgKmPerLiter = 8.16;
+
+function selectOctanaje(oct, price, btn) {
+  currentFuelPrice = price;
+  document.querySelectorAll('.fuel-chip').forEach(el => {
+    el.className = 'fuel-chip py-1.5 px-2 rounded bg-surface-container-highest/60 hover:bg-surface-container-highest text-left transition-all active:scale-95';
+    const titleSpan = el.querySelector('span.font-bold');
+    if (titleSpan) {
+      titleSpan.className = 'font-label-sm text-label-sm font-bold text-on-surface';
+    }
+    const priceSpan = el.querySelector('span.font-currency-clp');
+    if (priceSpan) {
+      priceSpan.className = 'font-currency-clp text-[12px] text-on-surface-variant block font-semibold mt-0.5';
+    }
+  });
+  btn.className = 'fuel-chip py-1.5 px-2 rounded bg-primary/20 border border-primary text-left transition-all active:scale-95';
+  const activeTitle = btn.querySelector('span.font-bold');
+  if (activeTitle) activeTitle.className = 'font-label-sm text-label-sm font-bold text-primary';
+  const activePrice = btn.querySelector('span.font-currency-clp');
+  if (activePrice) activePrice.className = 'font-currency-clp text-[12px] text-primary block font-bold mt-0.5';
+  recalculateSpend();
+  showToast('Octanaje actualizado: ' + oct + ' Oct ($' + price.toLocaleString('es-CL') + '/L CNE)');
+}
+
+function quickEditKm() {
+  const promptVal = prompt('Ingresa tu estimación de kilómetros anuales:', currentAnnualKm.toString());
+  if (promptVal && !isNaN(promptVal) && Number(promptVal) > 0) {
+    currentAnnualKm = parseInt(promptVal, 10);
+    const display = document.getElementById('userKmDisplay');
+    if (display) display.textContent = currentAnnualKm.toLocaleString('es-CL') + ' km/año';
+    const subDisplay = display?.nextElementSibling;
+    if (subDisplay) subDisplay.textContent = '~' + Math.round(currentAnnualKm / 12).toLocaleString('es-CL') + ' km/mes';
+    recalculateSpend();
+    showToast('Kilometraje ajustado a ' + currentAnnualKm.toLocaleString('es-CL') + ' km/año');
+  }
+}
+
+function recalculateSpend() {
+  const litersPerYear = currentAnnualKm / avgKmPerLiter;
+  const totalAnnual = Math.round(litersPerYear * currentFuelPrice);
+  const totalMonthly = Math.round(totalAnnual / 12);
+  const monthEl = document.getElementById('monthlyFuelSpend');
+  const yearEl = document.getElementById('annualFuelSpend');
+  if (monthEl) monthEl.textContent = '$' + totalMonthly.toLocaleString('es-CL');
+  if (yearEl) yearEl.textContent = 'Anual: $' + totalAnnual.toLocaleString('es-CL') + ' CLP / año';
+}
+</script>
+
+
+
+</body></html>
