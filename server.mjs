@@ -242,18 +242,3 @@ server.listen(PORT, () => {
     console.log(`   - http://localhost:${PORT}${r.path} (${r.title})`);
   });
 });
-// Conector oficial para obtener las especificaciones técnicas de Auto-Data
-async function obtenerEspecificacionesAutoData(idModelo) {
-  try {
-    const respuesta = await fetch(⁠ https://auto-data.net{idModelo} ⁠);
-    const datos = await respuesta.json();
-    return {
-      motor: datos.engine_volume || "No especificado",     // Cilindrada para el 3CV
-      consumo: datos.fuel_consumption_comb || "0",        // Consumo para la CNE
-      categoria: datos.body_type || "Desconocido"         // Categoría (SUV, Sedán, etc.)
-    };
-  } catch (error) {
-    console.error("Error al conectar con Auto-Data:", error);
-    return null;
-  }
-}
