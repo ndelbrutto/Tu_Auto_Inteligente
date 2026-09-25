@@ -241,7 +241,8 @@ server.listen(PORT, () => {
   routes.filter(r => r.path !== '/').forEach(r => {
     console.log(`   - http://localhost:${PORT}${r.path} (${r.title})`);
   });
-});// Conector oficial para obtener las especificaciones técnicas de Auto-Data
+});
+// Conector oficial para obtener las especificaciones técnicas de Auto-Data
 async function obtenerEspecificacionesAutoData(idModelo) {
   try {
     const respuesta = await fetch(⁠ https://auto-data.net{idModelo} ⁠);
