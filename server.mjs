@@ -242,29 +242,4 @@ server.listen(PORT, () => {
     console.log(`   - http://localhost:${PORT}${r.path} (${r.title})`);
   });
 });
-// Conector oficial blindado para las especificaciones técnicas de Auto-Data
-async function obtenerEspecificacionesAutoData(idModelo) {
-  if (!idModelo) return null;
-  try {
-    const url = ⁠ https://auto-data.net{encodeURIComponent(idModelo)} ⁠;
-    const respuesta = await fetch(url, { method: 'GET', headers: { 'Accept': 'application/json' } });
-    
-    if (!respuesta.ok) {
-      console.log(⁠ Aviso: Auto-Data respondió con estado ${respuesta.status} ⁠);
-      return null;
-    }
-    
-    const datos = await respuesta.json();
-    return {
-      motor: datos.engine_volume || "No especificado",     // Cilindrada para el 3CV
-      consumo: datos.fuel_consumption_comb || "0",        // Consumo para la CNE
-      categoria: datos.body_type || "Desconocido"         // Categoría (SUV, Sedán, etc.)
-    };
-  } catch (error) {
-    console.error("Error controlado al conectar con Auto-Data:", error.message);
-    return { motor: "No especificado", consumo: "0", categoria: "Desconocido" };
-  }
-}
 
-// Cierre definitivo del archivo
-export { obtenerEspecificacionesAutoData };
